@@ -1,5 +1,7 @@
 version: 2
 
+project_name: e2engine
+
 builds:
   - main: ./cmd/cli
     binary: e2engine
@@ -47,6 +49,18 @@ archives:
       - LICENSE
     wrap_in_directory: true
 
+nfpms:
+  - package_name: e2engine
+    vendor: E2Engine
+    homepage: "https://github.com/e2engine/cli"
+    maintainer: "Yaroslav Grebnov <grebnov@gmail.com>"
+    description: "Declarative end-to-end testing and service mocking for distributed systems."
+    license: "Apache-2.0"
+    formats:
+      - deb
+      - rpm
+    bindir: /usr/bin
+
 checksum:
   name_template: checksums.txt
 
@@ -60,12 +74,13 @@ changelog:
       - "^vendor:"
       - "^tests:"
 
-brews:
-  - repository:
+homebrew_casks:
+  - name: e2engine
+    repository:
       owner: e2engine
       name: homebrew-tap
       token: "{{ .Env.TAP_GITHUB_TOKEN }}"
-    directory: Formula
+    directory: Casks
     commit_author:
       name: Yaroslav Grebnov
       email: grebnov@gmail.com
@@ -73,3 +88,13 @@ brews:
     description: "Declarative end-to-end testing and service mocking for distributed systems."
     license: "Apache-2.0"
     skip_upload: auto
+
+scoops:
+  - name: e2engine
+    repository:
+      owner: e2engine
+      name: scoop-bucket
+      token: "{{ .Env.SCOOP_GITHUB_TOKEN }}"
+    homepage: "https://github.com/e2engine/cli"
+    description: "Declarative end-to-end testing and service mocking for distributed systems."
+    license: "Apache-2.0"
