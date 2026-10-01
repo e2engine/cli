@@ -1,0 +1,158 @@
+version: "2"
+output:
+  formats:
+    text:
+      path: stdout
+
+linters:
+  default: none
+  enable:
+    - bodyclose
+    - copyloopvar
+    - depguard
+    - dogsled
+    - dupl
+    - durationcheck
+    - errcheck
+    - funlen
+    - goconst
+    - gocritic
+    - gocyclo
+    - gomoddirectives
+    - gosec
+    - govet
+    - importas
+    - ineffassign
+    - lll
+    - misspell
+    - nakedret
+    - noctx
+    - nolintlint
+    - prealloc
+    - predeclared
+    - revive
+    - staticcheck
+    - tparallel
+    - unconvert
+    - unparam
+    - unused
+    - wastedassign
+    - whitespace
+  settings:
+    depguard:
+      rules:
+        main:
+          deny:
+            - pkg: github.com/pkg/errors
+              desc: Use `errors` package from the standard library
+    dupl:
+      threshold: 100
+    funlen:
+      lines: 120
+      statements: 60
+      ignore-comments: true
+    goconst:
+      min-len: 2
+      min-occurrences: 2
+    gocritic:
+      enabled-tags:
+        - diagnostic
+        - style
+        - performance
+        - experimental
+        - opinionated
+    gocyclo:
+      min-complexity: 25
+    gosec:
+      excludes:
+        - G115
+    govet:
+      enable:
+        - shadow
+    nakedret:
+      max-func-lines: 50
+
+  exclusions:
+    generated: lax
+    presets:
+      - comments
+      - common-false-positives
+      - legacy
+      - std-error-handling
+    rules:
+      - path: ^cmd/cli/(check|create|delete|get|run|validate)\.go$
+        linters:
+          - goconst
+
+      - path: ^internal/output/view/
+        linters:
+          - goconst
+
+      - path: ^cmd/cli/(check|create|delete|get|list|run|validate)\.go$
+        linters:
+          - dupl
+
+      - path: ^internal/output/view/(environment|test|testsuite)\.go$
+        linters:
+          - dupl
+
+      - path: ^internal/service/(environment|test|testexecution|testsuite|testsuiteexecution)\.go$
+        linters:
+          - dupl
+
+      - path: ^internal/output/view/(resource|testexecution|testsuiteexecution)\.go$
+        text: "hugeParam:"
+        linters:
+          - gocritic
+
+      - path: ^(internal/command/version/version|internal/service/build)\.go$
+        text: "hugeParam:"
+        linters:
+          - gocritic
+
+      - path: ^internal/service/build\.go$
+        linters:
+          - nakedret
+
+      - path: ^internal/runnerprocess/launcher\.go$
+        linters:
+          - noctx
+
+      - path: _test\.go$
+        linters:
+          - dogsled
+          - dupl
+          - funlen
+          - goconst
+          - gocritic
+          - gocyclo
+          - gosec
+          - govet
+          - lll
+          - noctx
+          - revive
+          - staticcheck
+          - unparam
+    paths:
+      - vendor
+
+formatters:
+  enable:
+    - gci
+    - gofmt
+    - goimports
+
+  settings:
+    gci:
+      sections:
+        - standard
+        - default
+        - prefix(github.com/e2engine/cli)
+    goimports:
+      local-prefixes:
+        - github.com/e2engine/cli
+
+  exclusions:
+    generated: lax
+    paths:
+      - vendor
