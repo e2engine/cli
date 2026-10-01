@@ -39,3 +39,42 @@ jobs:
 
       - name: Build Docker image
         run: make build-image
+
+  e2e:
+    needs: build
+    runs-on: ubuntu-latest
+
+    env:
+      GOPRIVATE: github.com/e2engine/*
+
+    steps:
+      - name: Checkout CLI
+        uses: actions/checkout@v7
+
+      - name: Setup Go
+        uses: actions/setup-go@v7
+        with:
+          go-version: stable
+
+      - name: Configure private modules
+        run: |
+          git config --global \
+            url."https://x-access-token:${{ secrets.E2ENGINE_READ_TOKEN }}@github.com/".insteadOf \
+            "https://github.com/"
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Checkout E2Engine tests
+        uses: actions/checkout@v7
+        with:
+          repository: e2engine/tests
+          ref: v0.0.3
+          path: e2engine-tests
+          token: ${{ secrets.E2ENGINE_READ_TOKEN }}
+
+      - name: Run E2E tests
+        run: |
+          make -C e2engine-tests test-cli test-docker \
+            CLI_REPO="${{ github.workspace }}/.git" \
+            CLI_REF="${{ github.sha }}"
