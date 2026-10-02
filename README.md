@@ -4,33 +4,46 @@ Command-line interface for E2Engine.
 
 This module provides the E2Engine command-line application for creating, validating, listing, inspecting, deleting, and running E2Engine resources using local E2Engine services.
 
+## Installation
+
+### macOS
+
+Install E2Engine using Homebrew:
+
+```bash
+brew install --cask e2engine/tap/e2engine
+```
+
+### Linux
+
+Download the appropriate .deb or .rpm package for your architecture from the [latest GitHub release](https://github.com/e2engine/cli/releases/latest).
+
+Debian/Ubuntu:
+
+```bash
+sudo apt install ./e2engine_*.deb
+```
+
+Fedora/RHEL:
+
+```bash
+sudo dnf install ./e2engine_*.rpm
+```
+
+### Windows
+
+Install E2Engine using Scoop:
+
+```powershell
+scoop bucket add e2engine https://github.com/e2engine/scoop-bucket
+scoop install e2engine
+```
+
 ## Build
 
 ```bash
 make build-cli
 ```
-
-## Packages
-
-**cmd/cli**
-
-E2Engine CLI entry point and Cobra command definitions.
-
-**internal/command**
-
-Command handlers for E2Engine resources and operations.
-
-**internal/service**
-
-CLI service construction and integration with E2Engine Core and persistence implementations.
-
-**internal/output**
-
-Output configuration and rendering used by CLI commands.
-
-**internal/runnerprocess**
-
-Local runner process lifecycle and launching.
 
 ## Development
 
@@ -62,12 +75,12 @@ make verify
 
 This repository is part of E2Engine.
 
-- core — core domain model, execution logic, and public APIs
-- repository — persistence implementations
-- runner-local — local test execution
-- cli — command-line interface
-- tests — end-to-end tests for E2Engine
-- demo — executable demonstration system and E2Engine examples
+- [core](https://github.com/e2engine/core) — core domain model, execution logic, and public APIs
+- [repository](https://github.com/e2engine/repository) — persistence implementations
+- [runner-local](https://github.com/e2engine/runner-local) — local test execution
+- [cli](https://github.com/e2engine/cli) — command-line interface
+- [tests](https://github.com/e2engine/tests) — end-to-end tests for E2Engine
+- demo — executable demonstration system and E2Engine usage examples
 
 ## License
 

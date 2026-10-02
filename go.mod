@@ -3,9 +3,9 @@ module github.com/e2engine/cli
 go 1.27
 
 require (
-	github.com/e2engine/core v0.0.1
-	github.com/e2engine/repository v0.0.1
-	github.com/e2engine/runner-local v0.0.1
+	github.com/e2engine/core v0.1.0
+	github.com/e2engine/repository v0.1.0
+	github.com/e2engine/runner-local v0.1.0
 	github.com/spf13/cobra v1.10.2
 	github.com/ygrebnov/config v0.4.3
 	github.com/ygrebnov/errorc v0.6.1
@@ -14,6 +14,7 @@ require (
 	github.com/ygrebnov/model v0.7.5
 	github.com/ygrebnov/render v0.0.1
 	go.uber.org/mock v0.6.0
+	gopkg.in/yaml.v3 v3.0.1
 )
 
 require (
@@ -37,7 +38,6 @@ require (
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20260928230214-8a89bd6388cc // indirect
 	google.golang.org/grpc v1.84.0 // indirect
 	google.golang.org/protobuf v1.36.12 // indirect
-	gopkg.in/yaml.v3 v3.0.1 // indirect
 	modernc.org/libc v1.77.1 // indirect
 	modernc.org/mathutil v1.7.1 // indirect
 	modernc.org/memory v1.12.1 // indirect
