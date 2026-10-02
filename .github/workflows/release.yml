@@ -13,9 +13,6 @@ jobs:
   goreleaser:
     runs-on: ubuntu-latest
 
-    env:
-      GOPRIVATE: github.com/e2engine/*
-
     steps:
       - uses: actions/checkout@v7
         with:
@@ -26,12 +23,6 @@ jobs:
       - uses: actions/setup-go@v7
         with:
           go-version: stable
-
-      - name: Configure private modules
-        run: |
-          git config --global \
-            url."https://x-access-token:${{ secrets.E2ENGINE_READ_TOKEN }}@github.com/".insteadOf \
-            "https://github.com/"
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v4
