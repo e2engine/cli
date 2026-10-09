@@ -114,6 +114,11 @@ linters:
         linters:
           - nakedret
 
+      - path: ^internal/service/build\.go$
+        text: "unexported-return:"
+        linters:
+          - revive
+
       - path: ^internal/runnerprocess/launcher\.go$
         linters:
           - noctx

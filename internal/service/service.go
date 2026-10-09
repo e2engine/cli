@@ -154,6 +154,9 @@ func newCloser(stack ...closer) *closerStack {
 }
 
 func (c *closerStack) Add(resource closer) {
+	if resource == nil {
+		return
+	}
 	c.stack = append(c.stack, resource)
 }
 

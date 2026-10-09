@@ -3,9 +3,9 @@ module github.com/e2engine/cli
 go 1.27
 
 require (
-	github.com/e2engine/core v0.1.0
-	github.com/e2engine/repository v0.1.0
-	github.com/e2engine/runner-local v0.1.0
+	github.com/e2engine/core v0.1.2
+	github.com/e2engine/repository v0.1.1
+	github.com/e2engine/runner-local v0.1.1
 	github.com/spf13/cobra v1.10.2
 	github.com/ygrebnov/config v0.4.3
 	github.com/ygrebnov/errorc v0.6.1
@@ -20,6 +20,9 @@ require (
 require (
 	github.com/bufbuild/protocompile v0.14.1 // indirect
 	github.com/dustin/go-humanize v1.1.0 // indirect
+	github.com/e2engine/instrumentation-go v0.1.1 // indirect
+	github.com/e2engine/instrumentation-go/grpc v0.1.1 // indirect
+	github.com/e2engine/instrumentation-go/http v0.1.1 // indirect
 	github.com/golang-migrate/migrate/v4 v4.20.1 // indirect
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
