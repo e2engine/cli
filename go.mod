@@ -3,7 +3,7 @@ module github.com/e2engine/cli
 go 1.27
 
 require (
-	github.com/e2engine/core v0.1.2
+	github.com/e2engine/core v0.2.0
 	github.com/e2engine/repository v0.1.1
 	github.com/e2engine/runner-local v0.1.1
 	github.com/spf13/cobra v1.10.2
