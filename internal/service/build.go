@@ -200,14 +200,11 @@ func BuildRunnerService(
 	callStoreFactory := corecall.NewStoreFactory()
 	serviceProvider := coreservice.NewProvider(cfg.Runtime.ServiceProvider, logger)
 
-	testWorker, err := coreworker.NewWorker(
+	testWorker := coreworker.NewWorker(
 		cfg.Runner.Worker,
 		logger,
 		serviceProvider.GetGRPCMethodResolver(),
 	)
-	if err != nil {
-		return nil, err
-	}
 
 	environment := runtime.NewEnvironmentController(
 		cfg.Runtime,

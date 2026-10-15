@@ -3,9 +3,9 @@ module github.com/e2engine/cli
 go 1.27
 
 require (
-	github.com/e2engine/core v0.1.2
-	github.com/e2engine/repository v0.1.1
-	github.com/e2engine/runner-local v0.1.1
+	github.com/e2engine/core v0.2.1
+	github.com/e2engine/repository v0.2.1
+	github.com/e2engine/runner-local v0.2.1
 	github.com/spf13/cobra v1.10.2
 	github.com/ygrebnov/config v0.4.3
 	github.com/ygrebnov/errorc v0.6.1
@@ -34,11 +34,11 @@ require (
 	github.com/spf13/pflag v1.0.9 // indirect
 	github.com/ygrebnov/metrics v0.1.1 // indirect
 	github.com/ygrebnov/workers v0.7.1 // indirect
-	golang.org/x/net v0.59.0 // indirect
-	golang.org/x/sync v0.23.0 // indirect
-	golang.org/x/sys v0.48.0 // indirect
-	golang.org/x/text v0.42.0 // indirect
-	google.golang.org/genproto/googleapis/rpc v0.0.0-20260928230214-8a89bd6388cc // indirect
+	golang.org/x/net v0.61.0 // indirect
+	golang.org/x/sync v0.24.0 // indirect
+	golang.org/x/sys v0.49.0 // indirect
+	golang.org/x/text v0.43.0 // indirect
+	google.golang.org/genproto/googleapis/rpc v0.0.0-20261012220534-4341edf3f941 // indirect
 	google.golang.org/grpc v1.84.0 // indirect
 	google.golang.org/protobuf v1.36.12 // indirect
 	modernc.org/libc v1.77.1 // indirect
