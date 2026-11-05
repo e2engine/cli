@@ -6,8 +6,8 @@ github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc h1:U9qPSI2PIWSS1
 github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/dustin/go-humanize v1.1.0 h1:dbKTrvD0klcbBV/h4AWJdMuZogJACoMlvWIWZ5b2xWg=
 github.com/dustin/go-humanize v1.1.0/go.mod h1:hc1CvRkJMsgxqjmjMQF3QNRAZBwY8AXBAzKYoSX9sFI=
-github.com/e2engine/core v0.2.1 h1:U0K4Ak4RheCxVX9+pLUyF/k8mrRB9rb0ruxxa6JWUX4=
-github.com/e2engine/core v0.2.1/go.mod h1:8oN/239uuU+jNNA+CxDF7h68HKh0cL+vON9D/mcqN/Y=
+github.com/e2engine/core v0.3.0 h1:hx7THwTfc9wYtFOW7sE9kfLNFOG8ff/2tD+lD4pvzmM=
+github.com/e2engine/core v0.3.0/go.mod h1:8oN/239uuU+jNNA+CxDF7h68HKh0cL+vON9D/mcqN/Y=
 github.com/e2engine/instrumentation-go v0.1.1 h1:pkOQIQWWkGqHdU1F/b0tCtpFyNDc09kKebYZElHZS9k=
 github.com/e2engine/instrumentation-go v0.1.1/go.mod h1:zpWF7koAp+vFqYAfOx3mOJFn4GpLtzetguAs8n7+wIE=
 github.com/e2engine/instrumentation-go/grpc v0.1.1 h1:0sqxF3oCdxdVaJwzTshaf79VMXglVHJQ1bLte7vnH14=
