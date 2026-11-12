@@ -11,7 +11,7 @@ require (
 	github.com/ygrebnov/errorc v0.6.1
 	github.com/ygrebnov/keys v0.2.0
 	github.com/ygrebnov/log v0.4.4
-	github.com/ygrebnov/model v0.7.5
+	github.com/ygrebnov/model v0.8.0
 	github.com/ygrebnov/render v0.0.1
 	go.uber.org/mock v0.6.0
 	gopkg.in/yaml.v3 v3.0.1
